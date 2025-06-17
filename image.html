@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Food Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Image Gallery</h1>
+        
+        <div class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+                <button class="filter-btn" data-filter="soups">Soups</button>
+                <button class="filter-btn" data-filter="pizzas">Pizzas</button>
+            </div>
+        </div>
+        
+        <div class="gallery-container">
+            <!-- Vegetables -->
+            <div class="gallery" data-category="vegetables">
+                <div class="gallery-item">
+                    <img src="salad.jpg" alt="Fresh Green Salad" data-full="salad.jpg">
+                    <div class="overlay">
+                        <div class="overlay-content"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="description">Fresh Green Salad</div>
+                </div>
+            </div>
+            <div class="gallery" data-category="vegetables">
+                <div class="gallery-item">
+                    <img src="salad2.jpg" alt="Caesar Salad" data-full="salad2.jpg">
+                    <div class="overlay">
+                        <div class="overlay-content"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="description">Caesar Salad</div>
+                </div>
+            </div>
+
+            <!-- Soups -->
+            <div class="gallery" data-category="soups">
+                <div class="gallery-item">
+                    <img src="soup.jpg" alt="Homemade Tomato Soup" data-full="soup.jpg">
+                    <div class="overlay">
+                        <div class="overlay-content"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="description">Homemade Tomato Soup</div>
+                </div>
+            </div>
+            <div class="gallery" data-category="soups">
+                <div class="gallery-item">
+                    <img src="soup2.jpg" alt="Chicken Noodle Soup" data-full="soup2.jpg">
+                    <div class="overlay">
+                        <div class="overlay-content"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="description">Chicken Noodle Soup</div>
+                </div>
+            </div>
+
+            <!-- Pizzas -->
+            <div class="gallery" data-category="pizzas">
+                <div class="gallery-item">
+                    <img src="pizza.jpg" alt="Pepperoni Pizza" data-full="pizza.jpg">
+                    <div class="overlay">
+                        <div class="overlay-content"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="description">Pepperoni Pizza</div>
+                </div>
+            </div>
+            <div class="gallery" data-category="pizzas">
+                <div class="gallery-item">
+                    <img src="pizza2.jpg" alt="Margherita Pizza" data-full="pizza2.jpg">
+                    <div class="overlay">
+                        <div class="overlay-content"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="description">Margherita Pizza</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+            <button class="nav-btn prev-btn">&lt;</button>
+            <img id="lightbox-img" src="" alt="Lightbox Image">
+            <button class="nav-btn next-btn">&gt;</button>
+        </div>
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
